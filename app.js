@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let newPlatfromBottom = 100 + i * platformGap
             let newPlatform = new Platform(newPlatfromBottom)
             platforms.push(newPlatform)
+            console.log(platforms)
         }
     }
 
@@ -67,10 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
         downTimerId = setInterval(function(){
             doodlerBottomSpace -= 5
             doodler.style.bottom = doodlerBottomSpace + 'px'
-        }, 30)
-        if (doodlerBottomSpace <= 0){
+            if (doodlerBottomSpace <= 0){
             gameOver()
-        }
+            }
+        }, 30)
     }
 
     function gameOver(){
